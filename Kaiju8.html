@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimePulse</title>
+    <link rel="stylesheet" href="pagina.css">
+    <style>
+        .video-container {
+            display: none;
+        }
+        .video-container.active {
+            display: block;
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AnimePulse</h1>
+    </header>
+    <nav>
+        <a href="./HOME.html">Inicio</a>
+        <div class="dropdown">
+            <a href="#">Series</a>
+            <div class="dropdown-content">
+                <a href="./MHAHOME.html">My Hero Academy</a>
+                <a href="./Kaiju8HOME.html">Kaiju8</a>
+                <a href="./TMHOME.html">Tragones y Mazmorra </a>
+                <a href="#">Anime 4</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Generos</a>
+            <div class="dropdown-content">
+                <a href="">Aventura</a>
+                <a href="">Acción</a>
+                <a href="#">Romance</a>
+                <a href="#">Espias</a>
+            </div>
+        </div>
+        <a href="#">Películas</a>
+        <!--<a href="#">Contacto</a> -->
+    </nav>
+    <div class="content">
+        <h2>Kaiju8</h2>
+        <h3 id="chapter-title" style="text-align: left;">Capítulo 1</h3>
+        <div id="video1" class="video-container active">
+            <iframe src="https://streamtape.com/e/zrrGZ6jbWlhY0xQ/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video2" class="video-container">
+            <iframe src="https://streamtape.com/e/zQjDVB09vpCgZg/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video3" class="video-container">
+            <iframe src="https://streamtape.com/e/1LV6ee6mgQTeYJq/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video4" class="video-container">
+            <iframe src="https://streamtape.com/e/GePyQZ0PZ0T1gok/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video5" class="video-container">
+            <iframe src="https://streamtape.com/e/AMMwOWw6YdCX8ly/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video6" class="video-container">
+            <iframe src="https://streamtape.com/e/8PJRDlybyrSooJA/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video7" class="video-container">
+            <iframe src="https://streamtape.com/e/3V7MVkBRkKid1Bv/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video8" class="video-container">
+            <iframe src="https://streamtape.com/e/KP6zZqa1ROi0d2B/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video9" class="video-container">
+            <iframe src="https://streamtape.com/e/oZBZlblraptJXjo/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video10" class="video-container">
+            <iframe src="https://streamtape.com/e/m7wKGqQYvdtbakG/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video11" class="video-container">
+            <iframe src="https://streamtape.com/e/Vxe0QzZjdKsK1gm/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div id="video11" class="video-container">
+            <iframe src="https://streamtape.com/e/x2OzxwPLrRtkbAZ/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <button id="prevBtn">Capítulo Anterior</button>
+    <select name="Video" id="videoSelect">
+        <option value="0">Capítulo 01</option>
+        <option value="1">Capítulo 02</option>
+        <option value="2">Capítulo 03</option>
+        <option value="3">Capítulo 04</option>
+        <option value="4">Capítulo 05</option>
+        <option value="5">Capítulo 06</option>
+        <option value="6">Capítulo 07</option>
+        <option value="7">Capítulo 08</option>
+        <option value="8">Capítulo 09</option>
+        <option value="9">Capítulo 10</option>
+        <option value="10">Capítulo 11</option>
+        <option value="11">Capítulo 12</option>
+    </select>
+    <button id="nextBtn">Siguiente Capítulo</button>
+    <br><br><br>
+
+    <script>
+        let currentIndex = 0;
+        const videos = document.querySelectorAll('.video-container');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const videoSelect = document.getElementById('videoSelect');
+        const chapterTitle = document.getElementById('chapter-title');
+
+        function showVideo(index) {
+            videos.forEach((video, i) => {
+                video.classList.toggle('active', i === index);
+            });
+            chapterTitle.textContent = `Capítulo ${index + 1}`;
+        }
+
+        function showNextVideo() {
+            currentIndex = (currentIndex + 1) % videos.length;
+            showVideo(currentIndex);
+            videoSelect.value = currentIndex;
+        }
+
+        function showPrevVideo() {
+            currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+            showVideo(currentIndex);
+            videoSelect.value = currentIndex;
+        }
+
+        nextBtn.addEventListener('click', showNextVideo);
+        prevBtn.addEventListener('click', showPrevVideo);
+
+        videoSelect.addEventListener('change', (event) => {
+            currentIndex = parseInt(event.target.value);
+            showVideo(currentIndex);
+        });
+
+        showVideo(currentIndex);
+    </script>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; 2024 AnimePulse. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

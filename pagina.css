@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #636060;
+}
+
+header {
+    background-color: #282828;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Coloca el header en la parte superior */
+    width: 100%; /* Asegura que el header ocupe el ancho completo */
+    margin: 0 auto; /* Centra el header en la página */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    height: 85px; /* Establece la altura deseada para el header */
+    line-height: 20px; /* Centra verticalmente el texto en el header */
+    margin-bottom: 15px;
+}
+nav {
+    background-color: #4d0b0b;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    align-items: center;
+    position: fixed; /* Fija el nav en la parte superior */
+    top: 50px; /* Coloca el nav justo debajo del header */
+    width: 100%; /* Asegura que el nav ocupe el ancho completo */
+    height: 10px;
+    z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
+    margin-top: 45px;
+}
+
+.content {
+    margin-top: 150px; /* Ajusta este valor según la altura combinada del header y el nav */
+    margin-bottom: 50px;
+}
+
+nav a, .dropdown {
+    color: #fff;
+    text-decoration: none; /* Elimina la línea de subrayado */
+    padding: 8px 16px;
+    position: relative;
+    display: inline-block;
+}
+
+nav a:hover, .dropdown:hover a {
+    background-color: #575757;
+    text-decoration: none; /* Asegura que la línea no aparezca al pasar el mouse */
+}
+
+.anime-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.anime-card img {
+    width: 100%;
+}
+
+.anime-card h3 {
+    padding: 10px 0;
+}
+
+footer {
+    background-color: #282828;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: fixed; /* cambiar la posicion de footer */
+    bottom: 0;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+button {
+    background-color: black;
+    color: wheat;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none; /* Elimina la línea de subrayado en el contenido del dropdown */
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+button, select {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #9a11c4;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #004494;
+    transform: scale(0.98);
+}
+
+select:active {
+    background-color: #b30000;
+    transform: scale(1.05);
+}
+
+select:hover {
+    background-color: #940000;
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 4px solid #a73728;
+    background-color: #eaf9e7;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #555;
+    text-align: center;
+    margin: 15px 0;
+    padding: 5px;
+    border-bottom: 4px solid #28a745;
+    background-color: #eaf9e7;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: center;
+    margin: 15px 0;
+    padding: 5px;
+    border-bottom: none;
+    background-color: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px; /* Sets a fixed height for all images */
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+}
+
+.active {
+    display: block;
+}
+
+.justificado {
+    text-align: justify;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+.sub{
+    text-decoration: none;
+    color: blue;
+}

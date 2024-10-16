@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimePulse</title>
+    <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+    <header>
+        <h1>AnimePulse</h1>
+    </header> 
+    <nav>
+        <a href="./HOME.html">Inicio</a>
+        <div class="dropdown">
+            <a href="#">Series</a>
+            <div class="dropdown-content">
+                <a href="./MHAHOME.html">My Hero Academy</a>
+                <a href="./Kaiju8HOME.html">Kaiju8</a>
+                <a href="./TMHOME.html">Tragones y Mazmorra</a>
+                <a href="#">Anime 4</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Géneros</a>
+            <div class="dropdown-content">
+                <a href="#">Aventura</a>
+                <a href="#">Acción</a>
+                <a href="#">Romance</a>
+                <a href="#">Espías</a>
+            </div>
+        </div>
+        <a href="#">Películas</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <div class="content">
+        <h2>Kaiju No. 8</h2>
+        <div class="anime-card">
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <img src="./Imagenes/Kaiju8-0.jpg" alt="Imagen 1">
+                </div>
+                <div class="slide active">
+                    <img src="./Imagenes/Kaiju8-1.jpg" alt="Imagen 1">
+                </div>
+                <div class="slide">
+                    <img src="./Imagenes/Kaiju8-2.jpg" alt="Imagen 2">
+                </div>
+                <div class="slide">
+                    <img src="./Imagenes/Kaiju8-3.JPG" alt="Imagen 3">
+                </div>
+                <div class="slide">
+                    <img src="./Imagenes/Kaiju8-4.jpg" alt="Imagen 4">
+                </div>
+                
+            </div>
+           
+            <h3><a href="#" class="sub">Kaiju No. 8</a></h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K9oq3i3mmnY?si=pBSJaaoF_G3oIdGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="justificado"><strong>Kaiju No. 8</strong> es una serie de manga creada por Naoya Matsumoto. La historia se sitúa en un mundo donde enormes monstruos conocidos como Kaiju atacan las ciudades y amenazan a la humanidad. El protagonista, Kafka Hibino, es un hombre de 32 años que trabaja en una empresa de limpieza especializada en eliminar los restos de los Kaiju después de los ataques. Aunque siempre ha soñado con convertirse en un miembro de las fuerzas de defensa que luchan contra los Kaiju, su sueño parece inalcanzable.
+                <br><br>
+                Sin embargo, la vida de Kafka cambia drásticamente cuando se convierte en un Kaiju él mismo después de un incidente. Con su nueva forma y habilidades, decide unirse a las fuerzas de defensa para luchar contra otros Kaiju y proteger a la humanidad, mientras mantiene en secreto su verdadera identidad. La serie combina acción, aventuras y elementos de ciencia ficción, explorando temas de redención y el deseo de superar las limitaciones personales.
+            </p>
+            <h4><a href="./Kaiju8.html" class="sub">Temporada 1</a></h4>
+            <h4><a href="" class="sub">Temporada 2</a> NO DISPONIBLE</h4>
+
+        <!-- Añadir más tarjetas de anime según sea necesario -->
+        </div>
+        </div>
+    </div>
+    <script>
+        function movi() {
+            const slideshowContainers = document.querySelectorAll('.slideshow-container');
+            
+            slideshowContainers.forEach(container => {
+                let currentIndex = 0;
+                const slides = container.querySelectorAll('.slide');
+
+                function showNextSlide() {
+                    slides[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    slides[currentIndex].classList.add('active');
+                }
+
+                setInterval(showNextSlide, 3000); // Cambia de imagen cada 3 segundos (3000 ms)
+            });
+        }
+
+        // Inicializar los slideshows cuando la página carga
+        window.onload = movi;
+    </script>
+    <footer>
+        <p>&copy; 2024 AnimePulse. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

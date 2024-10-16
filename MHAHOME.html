@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimePulse</title>
+    <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+    <header>
+        <h1>AnimePulse</h1>
+    </header> 
+    <nav>
+        <a href="./HOME.html">Inicio</a>
+        <div class="dropdown">
+            <a href="#">Series</a>
+            <div class="dropdown-content">
+                <a href="./MHAHOME.html">My Hero Academy</a>
+                <a href="./Kaiju8HOME.html">Kaiju8</a>
+                <a href="#">Tragones y Mazmorra</a>
+                <a href="#">Anime 4</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Géneros</a>
+            <div class="dropdown-content">
+                <a href="#">Aventura</a>
+                <a href="#">Acción</a>
+                <a href="#">Romance</a>
+                <a href="#">Espías</a>
+            </div>
+        </div>
+        <a href="#">Películas</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <div class="content">
+        <h2>My Hero Academy</h2>
+        <div class="anime-card">
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <img src="./Imagenes/MMA5 (2).jpg" alt="Imagen 1">
+                </div>
+                <div class="slide">
+                    <img src="./Imagenes/HMA6 (1).jpg" alt="Imagen 2">
+                </div>
+                <div class="slide">
+                    <img src="./Imagenes/MMA7.jpg" alt="Imagen 3">
+                </div>
+                <div class="slide">
+                    <img src="./Imagenes/MMA8.JPG" alt="Imagen 4">
+                </div>
+            </div>
+           
+            <h3><a href="./MHA.html">My Hero Academy</a></h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lFXpmYK6SEQ?si=SFDWu2xhQ_SWulpr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="justificado"><strong>My Hero Academia</strong> es una serie de manga y anime creada por Kōhei Horikoshi. La historia se desarrolla en un mundo donde casi todos los seres humanos tienen superpoderes llamados "Quirks". El protagonista, Izuku Midoriya, nace sin un Quirk, pero sueña con convertirse en un héroe como su ídolo All Might. Tras un encuentro fortuito con All Might, quien le transfiere su propio poder, Izuku comienza su formación en la Academia U.A., una escuela para héroes en entrenamiento. La serie sigue sus esfuerzos por convertirse en un héroe profesional mientras enfrenta desafíos y villanos en su camino, explorando temas de heroísmo, amistad y autodescubrimiento.</p>
+            <h4><a href="">Temporada 1</a>NO DISPONIBLE</h4>
+            <h4><a href="">Temporada 2</a>NO DISPONIBLE</h4>
+            <h4><a href="">Temporada 3</a>NO DISPONIBLE</h4>
+            <h4><a href="">Temporada 4</a>NO DISPONIBLE</h4>
+            <h4><a href="">Temporada 5</a></h4>
+            <h4><a href="./MHA6.html">Temporada 6</a></h4>
+        <!-- Añadir más tarjetas de anime según sea necesario -->
+        </div>
+        </div>
+    </div>
+    <script>
+        function movi() {
+            const slideshowContainers = document.querySelectorAll('.slideshow-container');
+            
+            slideshowContainers.forEach(container => {
+                let currentIndex = 0;
+                const slides = container.querySelectorAll('.slide');
+
+                function showNextSlide() {
+                    slides[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    slides[currentIndex].classList.add('active');
+                }
+
+                setInterval(showNextSlide, 3000); // Cambia de imagen cada 3 segundos (3000 ms)
+            });
+        }
+
+        // Inicializar los slideshows cuando la página carga
+        window.onload = movi;
+    </script>
+    <footer>
+        <p>&copy; 2024 AnimePulse. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
